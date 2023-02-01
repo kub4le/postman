@@ -528,9 +528,9 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"aaauser\":{\n\"username\":\"kuba2\",\n\"password\":\"b1b283077012aa28428e634d94bc7456700141451a002aa0f7831b41c9a46030\"\n}}"
+					"raw": "{\"authenticationldapaction\":{\n    \"name\": \"ldap-action\",\n    \"serverip\": \"192.168.68.4\",\n    \"serverport\": 389,\n    \"authtimeout\": \"3\",\n    \"ldapbinddn\": \"cn=kuba,cn=Users,dc=kuba,dc=lab\",\n    \"ldapbinddnpassword\": \"6a9d1b33ac232129baf7338230cfc5edf3c122f5540e9eaf39e3a507e19031fd\",\n    \"ldaploginname\": \"sAMAccountName\",\n    \"ldapbase\": \"cn=Users,dc=kuba,dc=lab\",\n    \"sectype\": \"PLAINTEXT\",\n    \"svrtype\": \"AD\",\n    \"authentication\": \"ENABLED\",\n    \"requireuser\": \"YES\",\n    \"success\": \"0\",\n    \"failure\": \"0\",\n    \"nestedgroupextraction\": \"OFF\",\n    \"maxnestinglevel\": \"2\",\n    \"followreferrals\": \"OFF\",\n    \"maxldapreferrals\": \"1\",\n    \"referraldnslookup\": \"A-REC\",\n    \"mssrvrecordlocation\": \"dc._msdcs\",\n    \"validateservercert\": \"NO\",\n    \"passwdchange\": \"ENABLED\",\n    \"email\": \"mail\",\n    \"cloudattributes\": \"DISABLED\"\n    }\n}"
 				},
-				"url": "https://192.168.68.91/nitro/v1/config/aaauser"
+				"url": "https://{{nsip}}/nitro/v1/config/authenticationldapaction"
 			},
 			"response": []
 		}
