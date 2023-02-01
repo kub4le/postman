@@ -7,7 +7,7 @@
 	"item": [
 		{
 			"name": "login",
-			"_postman_id": "1ed32f49-eb9e-4a15-808a-1b0b9967a36f",
+			"id": "1ed32f49-eb9e-4a15-808a-1b0b9967a36f",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -16,10 +16,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \n    \"login\": \n    { \n    \"username\":\"nsroot\", \n    \"password\":\"1qaz@WSX\"     \n    } \n}     ",
-					"options": {
-						"raw": {}
-					}
+					"raw": "{ \n    \"login\": \n    { \n    \"username\":\"nsroot\", \n    \"password\":\"1qaz@WSX\"     \n    } \n}     "
 				},
 				"url": "http://{{nsip}}/nitro/v1/config/login"
 			},
@@ -27,7 +24,7 @@
 		},
 		{
 			"name": "logout",
-			"_postman_id": "f83e85b7-419e-4fbb-b189-b22cac177552",
+			"id": "f83e85b7-419e-4fbb-b189-b22cac177552",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
 				"disabledSystemHeaders": {
@@ -45,10 +42,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \n    \"logout\":{} \n}  ",
-					"options": {
-						"raw": {}
-					}
+					"raw": "{ \n    \"logout\":{} \n}  "
 				},
 				"url": "http://{{nsip}}/nitro/v1/config/logout"
 			},
@@ -56,27 +50,51 @@
 		},
 		{
 			"name": "save",
-			"_postman_id": "dd3a8793-b071-4684-a870-adaeaecd200c",
+			"id": "dd3a8793-b071-4684-a870-adaeaecd200c",
 			"protocolProfileBehavior": {
-				"disableBodyPruning": true
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
 			},
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{ \n    \"login\": \n    { \n    \"username\":\"nsroot\", \n    \"password\":\"nsroot\"     \n    } \n}     ",
-					"options": {
-						"raw": {}
-					}
+					"raw": "{ \n    \"nsconfig\": \n    {} \n} "
 				},
-				"url": "https://192.168.68.91/nitro/v1/config/login"
+				"url": {
+					"raw": "https://{{nsip}}/nitro/v1/config/nsconfig?action=save",
+					"protocol": "https",
+					"host": [
+						"{{nsip}}"
+					],
+					"path": [
+						"nitro",
+						"v1",
+						"config",
+						"nsconfig"
+					],
+					"query": [
+						{
+							"key": "action",
+							"value": "save"
+						}
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "name and load balancing method of all load balancing virtual servers",
-			"_postman_id": "6310d196-ffbe-4427-9ed3-e3de5c3ea132",
+			"id": "6310d196-ffbe-4427-9ed3-e3de5c3ea132",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
 				"disabledSystemHeaders": {
@@ -94,10 +112,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {}
-					}
+					"raw": ""
 				},
 				"url": {
 					"raw": "https://{{nsip}}/nitro/v1/config/lbvserver?attrs=name,lbmethod",
@@ -123,7 +138,7 @@
 		},
 		{
 			"name": "datasets",
-			"_postman_id": "0dee6347-3436-408e-9f1c-186c2e163d2c",
+			"id": "0dee6347-3436-408e-9f1c-186c2e163d2c",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
 				"disabledSystemHeaders": {
@@ -141,10 +156,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {}
-					}
+					"raw": ""
 				},
 				"url": "https://{{nsip}}/nitro/v1/config/policydataset"
 			},
@@ -152,7 +164,7 @@
 		},
 		{
 			"name": "datasets binding",
-			"_postman_id": "f6ef70a0-e300-4ce2-9860-763899a6c436",
+			"id": "f6ef70a0-e300-4ce2-9860-763899a6c436",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
 				"disabledSystemHeaders": {
@@ -170,10 +182,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {}
-					}
+					"raw": ""
 				},
 				"url": "https://{{nsip}}/nitro/v1/config/policydataset_binding/allowed_ip"
 			},
@@ -181,7 +190,7 @@
 		},
 		{
 			"name": "datasets bindingvalue",
-			"_postman_id": "7c97f131-05ef-4f2f-9450-17baa24c3f6a",
+			"id": "7c97f131-05ef-4f2f-9450-17baa24c3f6a",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
 				"disabledSystemHeaders": {
@@ -199,10 +208,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {}
-					}
+					"raw": ""
 				},
 				"url": "https://{{nsip}}/nitro/v1/config/policydataset_binding/allowed_ip"
 			},
@@ -210,7 +216,7 @@
 		},
 		{
 			"name": "datasets bindingvalue add",
-			"_postman_id": "58e9afc3-7b5d-4764-a7db-cf3633082833",
+			"id": "58e9afc3-7b5d-4764-a7db-cf3633082833",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
 				"disabledSystemHeaders": {
@@ -260,7 +266,7 @@
 		},
 		{
 			"name": "datasets bindingvalue delete",
-			"_postman_id": "6800bf0a-56e9-4b17-ac0a-9f76db69a0ea",
+			"id": "6800bf0a-56e9-4b17-ac0a-9f76db69a0ea",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
 				"disabledSystemHeaders": {
@@ -278,10 +284,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {}
-					}
+					"raw": ""
 				},
 				"url": {
 					"raw": "https://{{nsip}}/nitro/v1/config/policydataset_binding/allowed_ip?args=value:\"185.25.64.249\"",
@@ -308,7 +311,7 @@
 		},
 		{
 			"name": "get aaauser",
-			"_postman_id": "cad48817-3263-4c99-a7e9-56180d5f287b",
+			"id": "cad48817-3263-4c99-a7e9-56180d5f287b",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
 				"disabledSystemHeaders": {
@@ -326,10 +329,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {}
-					}
+					"raw": ""
 				},
 				"url": {
 					"raw": "https://192.168.68.91/nitro/v1/config/aaauser?args=username:kuba",
@@ -358,7 +358,7 @@
 		},
 		{
 			"name": "get aaauser intranetip",
-			"_postman_id": "da29aa05-3858-4f51-990a-f96fc7a9f581",
+			"id": "da29aa05-3858-4f51-990a-f96fc7a9f581",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
 				"disabledSystemHeaders": {
@@ -376,10 +376,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {}
-					}
+					"raw": ""
 				},
 				"url": "http://192.168.68.91/nitro/v1/config/aaauser_intranetip_binding/kuba"
 			},
@@ -387,7 +384,7 @@
 		},
 		{
 			"name": "add aaauser intranetip",
-			"_postman_id": "8db9eeb7-ad64-43a4-8325-53be1980d0ff",
+			"id": "8db9eeb7-ad64-43a4-8325-53be1980d0ff",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
 				"disabledSystemHeaders": {
@@ -405,10 +402,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\"aaauser_intranetip_binding\":{\n\"username\":\"test\",\n\"intranetip\":\"192.168.0.101\",\n\"netmask\":\"255.255.255.255\"\n}}",
-					"options": {
-						"raw": {}
-					}
+					"raw": "{\n\"aaauser_intranetip_binding\":{\n\"username\":\"test\",\n\"intranetip\":\"192.168.0.101\",\n\"netmask\":\"255.255.255.255\"\n}}"
 				},
 				"url": "http://192.168.68.91/nitro/v1/config/aaauser_intranetip_binding"
 			},
@@ -416,7 +410,7 @@
 		},
 		{
 			"name": "delete aaauser intranetip",
-			"_postman_id": "ab7317f6-c247-4b35-96a3-ac7f91898cc2",
+			"id": "ab7317f6-c247-4b35-96a3-ac7f91898cc2",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
 				"disabledSystemHeaders": {
@@ -434,10 +428,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {}
-					}
+					"raw": ""
 				},
 				"url": {
 					"raw": "http://192.168.68.91/nitro/v1/config/aaauser_intranetip_binding/kuba?args=intranetip:1.2.3.4,netmask:255.255.255.0",
@@ -467,7 +458,7 @@
 		},
 		{
 			"name": "update aaauser",
-			"_postman_id": "4864b813-be8a-4bec-bc94-b5f5e7c09667",
+			"id": "4864b813-be8a-4bec-bc94-b5f5e7c09667",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
 				"disabledSystemHeaders": {
@@ -485,10 +476,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"aaauser\":{\n\"username\":\"kuba\"\n\"password\":\"test123#\"\n}}",
-					"options": {
-						"raw": {}
-					}
+					"raw": "{\"aaauser\":{\n\"username\":\"kuba\"\n\"password\":\"test123#\"\n}}"
 				},
 				"url": "https://192.168.68.91/nitro/v1/config/aaauser"
 			},
@@ -496,7 +484,7 @@
 		},
 		{
 			"name": "add aaauser",
-			"_postman_id": "32256dda-88db-4ad0-b9eb-474a68242327",
+			"id": "32256dda-88db-4ad0-b9eb-474a68242327",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true,
 				"disabledSystemHeaders": {
@@ -514,10 +502,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"aaauser\":{\n\"username\":\"kuba2\",\n\"password\":\"b1b283077012aa28428e634d94bc7456700141451a002aa0f7831b41c9a46030\"\n}}",
-					"options": {
-						"raw": {}
-					}
+					"raw": "{\"aaauser\":{\n\"username\":\"kuba2\",\n\"password\":\"b1b283077012aa28428e634d94bc7456700141451a002aa0f7831b41c9a46030\"\n}}"
 				},
 				"url": "https://192.168.68.91/nitro/v1/config/aaauser"
 			},
