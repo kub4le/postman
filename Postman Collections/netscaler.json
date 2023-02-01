@@ -9,11 +9,20 @@
 			"name": "login",
 			"id": "1ed32f49-eb9e-4a15-808a-1b0b9967a36f",
 			"protocolProfileBehavior": {
-				"disableBodyPruning": true
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
 			},
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{ \n    \"login\": \n    { \n    \"username\":\"nsroot\", \n    \"password\":\"1qaz@WSX\"     \n    } \n}     "
