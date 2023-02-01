@@ -507,6 +507,32 @@
 				"url": "https://192.168.68.91/nitro/v1/config/aaauser"
 			},
 			"response": []
+		},
+		{
+			"name": "add authenticationldapaction",
+			"id": "4f5a7b8f-ab67-4c87-bcd8-d2799ee90dd2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"aaauser\":{\n\"username\":\"kuba2\",\n\"password\":\"b1b283077012aa28428e634d94bc7456700141451a002aa0f7831b41c9a46030\"\n}}"
+				},
+				"url": "https://192.168.68.91/nitro/v1/config/aaauser"
+			},
+			"response": []
 		}
 	]
 }
