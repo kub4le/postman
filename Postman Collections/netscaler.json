@@ -537,9 +537,9 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"aaauser\":{\n\"username\":\"kuba2\",\n\"password\":\"b1b283077012aa28428e634d94bc7456700141451a002aa0f7831b41c9a46030\"\n}}"
+					"raw": "{\"dnsaddrec\":{\n\"hostname\":\"oauth-sp.kuba.lab\",\n\"ipaddress\":\"192.168.68.43\",\n\"ttl\":\"3600\"\n}}"
 				},
-				"url": "https://192.168.68.91/nitro/v1/config/aaauser"
+				"url": "https://{{nsip}}/nitro/v1/config/dnsaddrec"
 			},
 			"response": []
 		},
