@@ -198,6 +198,32 @@
 			"response": []
 		},
 		{
+			"name": "update auditsyslogparams",
+			"id": "900ede59-4b0e-4a17-bb8a-3d06799067dd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "https://{{nsip}}/nitro/v1/config/auditsyslogparams"
+			},
+			"response": []
+		},
+		{
 			"name": "datasets binding",
 			"id": "f6ef70a0-e300-4ce2-9860-763899a6c436",
 			"protocolProfileBehavior": {
