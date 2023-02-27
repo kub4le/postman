@@ -172,6 +172,32 @@
 			"response": []
 		},
 		{
+			"name": "auditsyslogparams",
+			"id": "3dcfdc9f-6ef2-46c5-ac7d-1716703d4994",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": "https://{{nsip}}/nitro/v1/config/policydataset"
+			},
+			"response": []
+		},
+		{
 			"name": "datasets binding",
 			"id": "f6ef70a0-e300-4ce2-9860-763899a6c436",
 			"protocolProfileBehavior": {
