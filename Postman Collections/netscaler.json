@@ -193,7 +193,7 @@
 					"mode": "raw",
 					"raw": ""
 				},
-				"url": "https://{{nsip}}/nitro/v1/config/policydataset"
+				"url": "https://{{nsip}}/nitro/v1/config/auditsyslogparams"
 			},
 			"response": []
 		},
